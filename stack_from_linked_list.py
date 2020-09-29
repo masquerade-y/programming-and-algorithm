@@ -34,6 +34,16 @@ class LinkedList(object):
         else:
             return None
 
+# better alternative for delete_first with fewer lines of code and clears out the next field of the deleted element
+# def delete_first(self):
+#     deleted = self.head
+#     if self.head:
+#         self.head = self.head.next
+#         deleted.next = None
+#     return deleted
+
+
+
 class Stack(object):
     def __init__(self,top=None):
         self.ll = LinkedList(top)
@@ -45,6 +55,8 @@ class Stack(object):
     def pop(self):
         "Pop (remove) the first element off the top of the stack and return it"
         return self.ll.delete_first()
+
+    
     
 # Test cases
 # Set up some Elements
